@@ -14,12 +14,20 @@
     state: started
     enabled: yes
 
+# - name: connect to mysql server
+#   community.mysql.mysql_info:
+#     login_user: root
+#     login_password: "{{ mysql_root_password }}"
+#     login_host: "{{ login_host }}"
+#   ignore errors: true
+#   register: mysql_info
+
 - name: connect to mysql server
   community.mysql.mysql_info:
     login_user: root
     login_password: "{{ mysql_root_password }}"
     login_host: "{{ login_host }}"
-  ignore errors: true
+  ignore_errors: true
   register: mysql_info
 
 - name: print mysql info

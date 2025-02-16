@@ -3,7 +3,7 @@ regions:
 - us-east-1
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
-  tag:Name: nginx
+  tag:Name: backend
   instance-state-name : running
 hostnames:
   - private-ip-address
